@@ -1,92 +1,147 @@
+*{
+  font-family: "Yu Mincho";
+}
+
 .App {
+  max-width: 640px;
   height: 100vh;
-  background-color: #0d1116;
+  background-color: #ffffff;
   overflow: scroll;
   text-align: center;
 }
-
-.container {
-  height: 100%;
-  background-color: #0d1116;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.header-container {
-  padding-top: 30px;
-}
-
-.header {
+.container{
   margin: 0;
-  font-size: 50px;
-  font-weight: bold;
 }
 
-.sub-text {
-  font-size: 25px;
-  color: white;
+.header-Ticketme{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.gradient-text {
-  background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.Logo{
+  height: 60px;
+  width: 120px;
+  margin: 10px;
 }
 
-.cta-button {
+.header-Icon{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.header-Icon img{
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+}
+
+.Overview{
+  font-family: "Hiragino Mincho ProN";
+  font-size: 40px;
+  margin: 0;
+}
+.information{
+  font: optional;
+  font-size: 20px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+h2 p{
+  width: 50px;
   height: 45px;
-  border: 0;
-  width: auto;
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius: 5px;
-  cursor: pointer;
+  display: flex;
+}
+
+.img{
+  max-width: 100%;
+}
+
+.Table{
+  margin: 10px;
+}
+
+.Title_pur{
+  font-size: 40px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.Ticket-content{
+  text-align: left;
+  margin-left: 6%;
+  margin-top: 5px;
+}
+
+.Ticket-content1{
+  font-size: 30px;
+  margin: 0;
+}
+
+.Ticket-content2{
+  font-size: 30px;
+  margin: 0;
+}
+
+.sub-content{
+  font-size: 12px;
+  margin: 3;
+}
+
+.SubTitle_pur{
   font-size: 16px;
-  font-weight: bold;
-  color: white;
+  margin-top: 0%;
+  margin: 5px;
 }
 
-.connect-wallet-button {
-  background: -webkit-linear-gradient(left, #60c657, #35aee2);
-  background-size: 200% 200%;
-  animation: gradient-animation 4s ease infinite;
+.NFTIcon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
-.mint-button {
-  background: -webkit-linear-gradient(left, #a200d6, #ff6fdf);
-  background-size: 200% 200%;
-  animation: gradient-animation 4s ease infinite;
-  margin-right: 15px;
+.icon-boar{
+  width: 10em;
+  height: 10em;
 }
 
-.opensea-button {
-  background-color: rgb(32, 129, 226);
+.icon-deer{
+  width: 160px;
+  height: 160px;
 }
 
-.mint-count {
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
+.Button{
+  width: 240px;
+  display: flex;
+  margin-left: 25%;
 }
 
-.footer-container {
+.footer-container{
+  margin-bottom: 0;
+  background-color: antiquewhite;
+  
+}
+
+.Wallet{
+  height: 50vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
 }
 
-.twitter-logo {
-  width: 35px;
-  height: 35px;
+.Walletcom1{
+  justify-content: left;
+  align-items: baseline;
 }
 
-.footer-text {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
+.MyPage{  
+  height: 50vh;
+  width: 100%;
 }
 
 /* KeyFrames */
