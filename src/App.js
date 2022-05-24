@@ -109,7 +109,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="container">
-        <BrowserRouter basename="/build/">
+        <BrowserRouter basename="/">
           <Routes>
             <Route path="/" element={<>
               <Header />
