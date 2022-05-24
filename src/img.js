@@ -1,5 +1,5 @@
-import pic from "../public/web3.png"
-import "../styles/App.css";
+import pic from "./public/web3.png"
+import "./styles/App.css";
 
 const Img = () => {
     return (

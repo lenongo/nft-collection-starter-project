@@ -1,6 +1,6 @@
-import boar from "../public/NFTticket boar.png"
-import deer from "../public/NFTticket deer.png"
-import "../styles/App.css";
+import boar from "./public/NFTticket boar.png"
+import deer from "./public/NFTticket deer.png"
+import "./styles/App.css";
 
 const Icon = ()=>{
     return (

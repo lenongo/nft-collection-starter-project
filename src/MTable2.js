@@ -6,7 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import "../styles/App.css";
+import "./styles/App.css";
 
 function createData(name, calories) {
   return { name, calories};
@@ -26,7 +26,7 @@ const MTable = () => {
       <p className='Overview'>OverView</p>
       <p className='information'>開催情報</p>
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 480 }} aria-label="simple table">
+        <Table sx={{ minWidth: 400 }} aria-label="simple table">
           <TableBody>
             {rows.map((row) => (
               <TableRow
@@ -36,9 +36,10 @@ const MTable = () => {
                 <TableCell component="th" scope="row">
                   {row.name}
                 </TableCell>
-                <TableCell 
-                  style={{width:300}}
-                  align="left">{row.calories}
+                <TableCell sx={{
+                  ml:10,
+                  fontSize: 14,}}>
+                  {row.calories}
                 </TableCell>
               </TableRow>
             ))}

@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
-import myNft from "../utils/MyNFT.json";
+import myNft from "./utils/MyNFT.json";
 import React, { useEffect, useState } from "react";
-import "../styles/App.css";
+import "./styles/App.css";
 
 
 const Wallet = () => {

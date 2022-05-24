@@ -1,10 +1,11 @@
 import { ethers } from "ethers";
-import myNft from "../utils/MyNFT.json";
+import myNft from "./utils/MyNFT.json";
+import "./styles/App.css";
+import WalletInfo from './walletinfo'
 import React, { useEffect, useState } from "react";
-import "../styles/App.css";
 
 
-const Button = () => {
+const Wallet = () => {
     const [currentAccount, setCurrentAccount] = useState("");
     const checkIfWalletIsConnected = async () => {
         const { ethereum } = window;
@@ -63,11 +64,7 @@ const Button = () => {
     );
     // App.js
     const askContractToMintNft = async () => {
-        const CONTRACT_ADDRESS = "0x14160325082e02978dA469ee39DCBf08FccA7576";
-        let cost = 100000000000000000;
-        let gasLimit = 30000000;
-        console.log("Cost: ", cost);
-        console.log("Gas limit: ", gasLimit);
+        const CONTRACT_ADDRESS = "0xC6E48676b96C57D82692faC0947E4089C395ea14";
         try {
             const { ethereum } = window;
             if (ethereum) {
@@ -78,23 +75,8 @@ const Button = () => {
                     myNft.abi,
                     signer
                 );
-                {/*
-                const tx = {
-                    'from': PUBLIC_KEY,
-                    'to': contractAddress,
-                    'nonce': nonce,
-                    'gas': 500000,
-                    'maxPriorityFeePerGas': 2999999987,
-                    'data': nftContract.methods.mintNFT(PUBLIC_KEY, tokenURI).encodeABI()
-                };
-
-                const signedTx = await web3.eth.accounts.signTransaction(tx, PRIVATE_KEY);
-                const transactionReceipt = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
-               */}
-                //console.log(`Transaction receipt: ${JSON.stringify(transactionReceipt)}`);
-
                 console.log("Going to pop wallet now to pay gas...");
-                let nftTxn = await connectedContract.createToken({value: ethers.utils.parseEther("1")});
+                let nftTxn = await connectedContract.createToken();
                 console.log("Mining...please wait.");
                 await nftTxn.wait();
 
@@ -116,12 +98,10 @@ const Button = () => {
         currentAccount === "" ? (
             renderNotConnectedContainer()
         ) : (
-            <button onClick={askContractToMintNft} className="cta-button connect-wallet-button">
-                NFTの購入
-            </button>
+            <WalletInfo currentAccount={currentAccount}/>
         )
     );
 };
 
 
-export default Button
+export default Wallet
