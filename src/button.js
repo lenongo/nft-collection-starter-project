@@ -35,7 +35,7 @@ const Button = () => {
             const { ethereum } = window;
             if (!ethereum) {
                 alert("Get MetaMask!");
-                return;
+                <a href="https://metamask.app.link/dapp/ticketme.jp/build/"></a>
             }
             /*
              * ウォレットアドレスに対してアクセスをリクエストしています。
